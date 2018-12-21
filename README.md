@@ -24,20 +24,22 @@ A starter kit for the Kaggle Whale ID Challenge.
 
 Pass
 
+## Setup
+
+* Install Conda.
+* Create Virtual Environment.
+* Install Dependencies.
+* Download the data.
+* Run the scripts/notebook.
+
 ## Literature Review
 
 [Kaggle Kernel](https://www.kaggle.com/martinpiotte/whale-recognition-model-with-score-0-78563/notebook)
 
 ## Project Design
 
-pass
+TBD.
 
 ## Strategy
 
-pass
-
-- [ ] Evaluator
-- [ ] Submission Generator
-- [ ] Prediction Interface
-- [ ] Trainer Interface
-- [ ] Trainer Epoch and Saver
+TBD.

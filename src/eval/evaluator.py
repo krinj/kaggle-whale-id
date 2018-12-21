@@ -18,7 +18,6 @@ def evaluate(samples: List[Sample], n: int=5):
     for sample in samples:
         n_correct += evaluate_single(sample, n)
 
-    Logger.field("Total Score", n_correct/n_total)
     return n_correct/n_total
 
 

@@ -4,10 +4,10 @@
 """
 Loads a bunch of data from the directory.
 """
-from k_util.logger import Logger
 
+from k_util.logger import Logger
 from ai.predictor import Predictor
-from data.loader import load_training_samples, load_testing_samples
+from data.loader import load_training_samples
 from eval.evaluator import evaluate
 
 if __name__ == "__main__":

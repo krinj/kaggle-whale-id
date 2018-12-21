@@ -4,6 +4,7 @@
 """
 Loads a bunch of data from the directory.
 """
+
 from k_util.logger import Logger
 
 from ai.predictor import Predictor

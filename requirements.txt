@@ -4,3 +4,6 @@ k-util
 k-vision
 opencv-python
 pandas
+matplotlib
+torch
+torchvision

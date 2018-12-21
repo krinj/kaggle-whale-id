@@ -19,3 +19,6 @@ class Sample:
     def image(self):
         """ Lazy load the image. """
         return cv2.imread(self.image_path)
+
+    def __repr__(self):
+        return f"[Sample: {self.image_id} | {self.label}]"

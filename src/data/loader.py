@@ -3,12 +3,11 @@
 """
 Loads all the samples from the specified source.
 """
+
 import os
 from typing import List
-
 import pandas
 from k_util.logger import Logger
-
 from data.sample import Sample
 from util.settings import Settings
 
@@ -25,7 +24,6 @@ def load_training_samples():
         sample = Sample(image_id=row["Image"], image_dir=train_image_path, label=row["Id"])
         samples.append(sample)
 
-    Logger.field("Samples Loaded", len(samples))
     return samples
 
 
@@ -42,5 +40,4 @@ def load_testing_samples():
         sample = Sample(image_id=file_name, image_dir=test_image_path)
         samples.append(sample)
 
-    Logger.field("Samples Loaded", len(samples))
     return samples

@@ -21,4 +21,5 @@ if __name__ == "__main__":
     Logger.log("Samples Predicted")
 
     # Evaluate the samples.
-    evaluate(samples)
+    score = evaluate(samples)
+    Logger.field("Score", score)

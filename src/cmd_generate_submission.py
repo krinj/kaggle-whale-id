@@ -22,5 +22,4 @@ if __name__ == "__main__":
         s.predictions = predictor.predict(s)
 
     Logger.log("Samples Predicted")
-
     generate_submission(samples)

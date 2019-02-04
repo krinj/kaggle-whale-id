@@ -12,22 +12,26 @@ from data.sample import Sample
 from util.settings import Settings
 
 
-def load_training_samples():
+def load_training_samples() -> List[Sample]:
     """ Load the training samples. """
     train_image_path = Settings.get("TRAIN_IMAGE_PATH")
     label_path = Settings.get("LABEL_PATH")
     data_frame = pandas.read_csv(label_path)
 
-    samples: List[Sample] = []
-
-    for index, row in data_frame.iterrows():
-        sample = Sample(image_id=row["Image"], image_dir=train_image_path, label=row["Id"])
-        samples.append(sample)
+    samples = get_samples(data_frame, train_image_path)
 
     return samples
 
 
-def load_testing_samples():
+def get_samples(data_frame, train_image_path):
+    samples: List[Sample] = []
+    for index, row in data_frame.iterrows():
+        sample = Sample(image_id=row["Image"], image_dir=train_image_path, label=row["Id"])
+        samples.append(sample)
+    return samples
+
+
+def load_testing_samples() -> List[Sample]:
     """ Load the training samples. """
     test_image_path = Settings.get("TEST_IMAGE_PATH")
     samples: List[Sample] = []

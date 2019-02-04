@@ -8,3 +8,5 @@ settings\.yaml
 *.csv
 
 notebooks/\.ipynb_checkpoints/
+
+src/output/

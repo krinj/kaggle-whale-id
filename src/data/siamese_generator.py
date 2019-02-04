@@ -30,13 +30,12 @@ def generate_siamese_samples():
     positive_siamese_samples = []
     for k, bin_samples in sample_bins.items():
         if k == "new_whale":
-            print("SKIP")
             continue
 
         n_samples = len(bin_samples)
         for i in range(n_samples):
             for j in range(i, n_samples):
-                siamese_sample = SiameseSample()
+                siamese_sample = SiameseSample(bin_samples[i], bin_samples[j])
                 positive_siamese_samples.append(siamese_sample)
 
     print(len(positive_siamese_samples))
@@ -64,7 +63,7 @@ def generate_siamese_samples():
                 # Get a random sample from the remaining batch.
                 bin_j = random.choice(random_bins)
                 sample_j = random.choice(bin_j)
-                siamese_sample = SiameseSample()
+                siamese_sample = SiameseSample(sample_i, sample_j)
                 negative_samples.append(siamese_sample)
 
     siamese_samples = positive_siamese_samples + negative_samples

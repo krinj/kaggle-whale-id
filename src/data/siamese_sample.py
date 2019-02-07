@@ -6,6 +6,7 @@
 
 import cv2
 import numpy as np
+from PIL import Image
 from raid.data.interface.i_single_clf_sample import ISingleClfSample
 from data.sample import Sample
 

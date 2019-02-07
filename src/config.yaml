@@ -1,0 +1,12 @@
+engine:
+  session_limit: 10
+  session_limit_type: SECONDS # One of [EPOCHS, SECONDS, MINUTES, HOURS]
+  interval: 120
+  interval_type: SECONDS  # One of [EPOCHS, SECONDS, MINUTES, HOURS]
+
+trainer:
+  freeze: [true, false]
+  batch_size: [8, 16]
+  nf: [2, 8]
+  size: 256
+  balanced_shuffle: false

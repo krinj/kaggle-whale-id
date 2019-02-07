@@ -66,6 +66,8 @@ def generate_siamese_samples():
                 siamese_sample = SiameseSample(sample_i, sample_j)
                 negative_samples.append(siamese_sample)
 
+    random.shuffle(negative_samples)
+    negative_samples = negative_samples[:len(positive_siamese_samples)]
     siamese_samples = positive_siamese_samples + negative_samples
     print(len(siamese_samples))
     return siamese_samples
